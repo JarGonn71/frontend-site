@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import { useRouter } from "next/router"
-
+import {NavbarContainer, FooterContainer} from '../components'
 
 
 
@@ -12,8 +12,13 @@ const MyLauout = ({title='Next', children, showSidebar=false}) => {
             <Head>
                 <title>{title}</title>
             </Head>
+           
             <main className="App">
-                {children}
+                <NavbarContainer/>
+                <div className="Container">
+                    {children}
+                </div>    
+                <FooterContainer/>
             </main>
         </>
     )

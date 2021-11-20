@@ -1,0 +1,33 @@
+.Auth{
+    $self: &;
+    margin-top: 56px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    &__Container{
+        margin-top: 4rem;
+        width: 80%;
+        height: 80%;
+        background: rgb(18, 18, 19);
+        border-radius: 30px;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    &__top{
+        display: flex;
+        justify-content: center;
+        div{
+            margin: 0 1rem;
+            cursor: pointer;
+            color: white;
+        }
+        .active{
+            color: cyan;
+        }
+    }
+
+    &__form{
+
+    }
+}

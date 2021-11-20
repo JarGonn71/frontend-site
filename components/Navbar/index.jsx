@@ -1,7 +1,10 @@
 import { Navbar, Container, Nav } from 'react-bootstrap';
 import styles from './Navbar.module.scss'
+import {MyLink} from '../'
+
 
 const NavbarContainer = () => {
+
     return (
       <div className={styles.NavbarWrapper}>
         <Navbar bg="transparent" expand="lg">
@@ -14,12 +17,23 @@ const NavbarContainer = () => {
                 style={{ maxHeight: '100px' }}
                 navbarScroll
               >
-                <Nav.Link href="/">Home</Nav.Link>
-                <Nav.Link href="#">Обучение</Nav.Link>
-                <Nav.Link href="#">Посты</Nav.Link>
-                <Nav.Link href="#">
-                  in Login
-                </Nav.Link>
+
+                <MyLink href={"/"}>
+                  Главная
+                </MyLink>
+
+                <MyLink href={"#"}>
+                  Обучение
+                </MyLink>
+
+                <MyLink href={"#"}>
+                  Посты
+                </MyLink>
+
+                <MyLink href={"/auth-user"}>
+                   in Login
+                </MyLink>
+               
               </Nav>
             </Navbar.Collapse>
           </Container>
