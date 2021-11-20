@@ -1,0 +1,13 @@
+.NavbarWrapper{
+    font-weight: bolder;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+    nav{
+        max-width: 900px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
