@@ -5,7 +5,7 @@ import { FaInstagram, FaOdnoklassniki, FaTwitter, FaFacebookF} from "react-icons
 
 const FooterContainer = () => {
     return (
-        <div className={styles.Container}>
+        <div   id="footer" className={styles.Container}>
             <div className={styles.Container__Box}>
                 <div className={styles.Container__Logo}>
                     LogoName

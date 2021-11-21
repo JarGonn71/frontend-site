@@ -1,25 +1,23 @@
-import React from 'react'
-import styles from './Fund.module.scss'
+import styles from './Education.module.scss'
 import Image from "next/image";
 
-const FundContainer = ({imageSrc}) => {
+const Education = ({imageSrc}) => {
     return (
         <div className={styles.Container}>
             <div className={styles.Container__box}>
-                
+                <div className={styles.Container__backImg}>
+                    <Image src={imageSrc} />
+                </div>
                 <div className={styles.Container__text}>
                         <h1>
-                            Демократия (Demos)
+                            Mediation
                         </h1>
                         <p>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti illum minima dicta, blanditiis consequuntur exercitationem.
                         </p>
                         <div className={styles.Container__BtnRegistration}>
-                            Принять участие
+                            Перейти к курсам
                         </div>
-                </div>
-                <div className={styles.Container__backImg}>
-                    <Image src={imageSrc} />
                 </div>
             </div>
             <div className={styles.Container__scrollBox}>
@@ -29,4 +27,4 @@ const FundContainer = ({imageSrc}) => {
     )
 }
 
-export default FundContainer
+export default Education

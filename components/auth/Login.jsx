@@ -1,44 +1,57 @@
 import React from 'react'
 import { useForm } from "react-hook-form";
+import {yupResolver} from '@hookform/resolvers/yup/dist/yup';
+import * as yup from "yup";
 
 import styles from './Form.module.scss'
 
+const schema = yup.object().shape({
+    email: yup.string().email('Email некоректный').required('Обязательное поле'),
+    password: yup.string().required('Обязательное поле'),
+  }).required();
+
 function Login() {
-    const { register, handleSubmit, watch, formState: { errors } } = useForm();
+    const { register, handleSubmit, watch, formState: { errors } } = useForm({
+        resolver: yupResolver(schema)
+      });
+
     const onSubmit = data => console.log(data);
 
     return (
         <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
             <div className={styles.form__item}>
-                <input type="email" 
+                <input type="text" 
                 className={styles.form__field} 
                 placeholder="Email" 
                 name="email" 
                 id='email' 
-                required 
-                {...register("email")} />
+                {...register("email", { required: true })} />
                 <label  className={styles.form__label}>
-                    Email
+                    email
                 </label>
+                <p>{errors.email?.message}</p>
             </div>
 
             <div className={styles.form__item}>
                 <input type="password" 
                 className={styles.form__field} 
-                placeholder="Password" 
+                placeholder="Пароль" 
                 name="password" 
-                id='password' 
-                required 
-                {...register("password")} />
+                id='password'  
+                {...register("password", { required: true })} />
                 <label  className={styles.form__label}>
-                    Password
+                     Пароль
                 </label>
+                <p>{errors.password?.message}</p>
             </div>
            
         
-            {errors.exampleRequired && <span>This field is required</span>}
-            <div>
-                <input type="submit" />
+            {/* {errors.password && <span>This field is required</span>} */}
+
+            <div className={styles.form__item}>
+                <button type="submit">
+                    Вход
+                </button>
             </div>
            
        </form>

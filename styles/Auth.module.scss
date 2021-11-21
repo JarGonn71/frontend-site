@@ -6,7 +6,8 @@
     justify-content: center;
     &__Container{
         margin-top: 4rem;
-        width: 80%;
+        width: 100%;
+        max-width: 700px;
         height: 80%;
         background: rgb(18, 18, 19);
         border-radius: 30px;
@@ -17,17 +18,41 @@
     &__top{
         display: flex;
         justify-content: center;
+        height: 10%;
         div{
+            font-size: 2rem;
             margin: 0 1rem;
             cursor: pointer;
             color: white;
-        }
-        .active{
-            color: cyan;
+            transition: .3s ease-in-out;
+            
+            &.active{
+                color: cyan;
+                transform: scale(1.2);
+            }
+            &.active:first-child{
+                margin-left: 20%;
+             }
+            &:last-child{
+
+            }
         }
     }
 
     &__form{
-
+        padding: 20px;
+        height: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }
+
+// @media (max-width: 400px) {
+//     .Auth{
+//         $self: &;
+//         &__Container{
+//             height: 90%;
+//         }
+//     }
+// }

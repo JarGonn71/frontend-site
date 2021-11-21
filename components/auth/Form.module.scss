@@ -5,11 +5,31 @@ $gray: #9b9b9b;
 
 .form{
     $self:&;
-
+    width: 100%;
     &__item{
         position: relative;
-        margin: 2rem 0;
+        margin: 2rem auto;
+        max-width: 400px;
+  
+        button{
+            outline: none;
+            border: 0;
+            border-radius: 15px;
+            padding: 5px 10px;
+            width: 100%;
+        }
+        p{
+            position: absolute;
+            bottom: -40px;
+            left: 0;
+            color: red;
+        }
     }
+
+    &__item:last-child{
+        margin-top:20%;
+    }
+
     &__field{
         font-family: inherit;
         width: 100%;
@@ -27,6 +47,7 @@ $gray: #9b9b9b;
         &::placeholder {
             color: transparent;
             background: transparent;
+            user-select: none;  
         }
 
         &:placeholder-shown ~ .form__label {
@@ -51,7 +72,8 @@ $gray: #9b9b9b;
         font-size: 1rem;
         color: $gray;
         color: $primary; 
-        font-weight:700;  
+        font-weight:700;
+        user-select: none;  
     }
     &__field:focus {
         ~ .form__label {
@@ -70,7 +92,7 @@ $gray: #9b9b9b;
         color: white
       }
 
-    /* reset input */
+
     &__field{
         &:required,&:invalid { 
             box-shadow:none; 
@@ -78,4 +100,5 @@ $gray: #9b9b9b;
     }
 
 }
+
 

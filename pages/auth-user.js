@@ -13,10 +13,10 @@ export default function Auth() {
             <div className={styles.Auth__Container}>
                 <div className={styles.Auth__top}>
                     <div className={state? `${styles.active}`: ''} onClick={()=>setstate(true)}>
-                        Login
+                        Вход
                     </div>
                     <div className={!state? `${styles.active}`: ''} onClick={()=>setstate(false)}>
-                        Registation
+                        Регистрация
                     </div>
                 </div>
                 <div className={styles.Auth__form}>

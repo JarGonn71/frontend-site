@@ -90,3 +90,16 @@
 }
 
 
+@media (max-width: 400px) {
+    .Container{
+        $self: &;
+        &__socialNetworks{
+            div{
+                margin-top: 0px;
+                a svg{
+                    font-size: 1.5rem;
+                }
+            } 
+        }
+    }
+}

@@ -1,46 +1,47 @@
 import { Navbar, Container, Nav } from 'react-bootstrap';
 import styles from './Navbar.module.scss'
-import {MyLink} from '../'
+import { NavMobile } from './NavMobile'
+import { MyNav } from './MyNav'
+import {useState, useEffect} from 'react'
 
 
 const NavbarContainer = () => {
+    
+  const [showMenu, setShowMenu] = useState(false)
 
-    return (
-      <div className={styles.NavbarWrapper}>
-        <Navbar bg="transparent" expand="lg">
-          <Container fluid>
-            <Navbar.Brand href="#">Logo</Navbar.Brand>
-            <Navbar.Toggle aria-controls="navbarScroll" />
-            <Navbar.Collapse id="navbarScroll" className="justify-content-end">
-              <Nav
-                className="my-2 my-lg-0"
-                style={{ maxHeight: '100px' }}
-                navbarScroll
-              >
+    useEffect(() => {
+        if(showMenu){
+            document.body.style.overflow = "hidden"
+        }else{
+          document.body.style.overflow = "auto"
+        }
+    }, [showMenu])
 
-                <MyLink href={"/"}>
-                  Главная
-                </MyLink>
 
-                <MyLink href={"#"}>
-                  Обучение
-                </MyLink>
+  const scrollToHeader = () => {
+    if(window){
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    }
+  }
 
-                <MyLink href={"#"}>
-                  Посты
-                </MyLink>
-
-                <MyLink href={"/auth-user"}>
-                   in Login
-                </MyLink>
-               
-              </Nav>
-            </Navbar.Collapse>
-          </Container>
-        </Navbar>
+  return (
+    <div className={styles.NavbarWrapper}>
+      <div className={styles.NavbarWrapper__Container}>
+        <div onClick={scrollToHeader} className={styles.NavbarWrapper__Logo}>
+          Logo
+        </div>
+        <div className={styles.NavbarWrapper__navDesktop}>
+          <MyNav/>
+        </div>
+        <NavMobile showMenu={showMenu} setShowMenu={setShowMenu}/>
       </div>
         
-    )
+    </div>
+        
+  )
 }
 
 export default NavbarContainer
