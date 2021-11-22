@@ -11,7 +11,7 @@ export const MyNav = () => {
             <MyLink href={"#"}>
                 Обучение
             </MyLink>
-            <MyLink href={"#"}>
+            <MyLink href={"/posts"}>
                 Посты
             </MyLink>
             <MyLink href={"/auth-user"}>

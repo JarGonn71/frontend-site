@@ -1,0 +1,130 @@
+.Post{
+    $self: &;
+    min-height: 100vh;
+    padding-top: 12vh;
+    &__top{
+        position: relative;
+        padding-bottom: 1rem;
+        display: flex;
+        justify-content: center;
+        border-bottom: 1px solid rgba(15, 15, 15, 0.342);
+    }
+    &__info{
+        position: absolute;
+        right: 2%;
+        cursor: pointer;
+        font-size: 1.4rem;
+        color: #622fc5;
+        opacity: 0.5;
+        transition: .25s ease-in-out;
+        &:hover{
+            opacity: 1;
+            color: #7b3afc;
+        }
+    }
+
+    &__boxInfo{
+        position: absolute;
+        right: 2%;
+        top: 100%;
+        z-index: 1000;
+        padding: 10px;
+        width: 200px;
+        background: white;
+        border-radius: 10px;  
+        box-shadow: -2px 3px 12px 0px #00000066; 
+    }
+    &__btn{
+        padding: 10px 30px;
+        background: #111316;
+        color: #fff;
+        cursor: pointer;
+        position: relative;
+        display: inline-block;
+        text-transform: uppercase;
+        font-size: 16px;
+        letter-spacing: 2px;
+        transition: .25s ease-in-out;
+       
+        &:hover{
+            color: #7b3afc;
+            text-shadow: 0px 0px 10px #c50aff;
+        }
+        span{
+            position: absolute;
+            display: block;
+            background: #622fc5;
+        }
+        span:nth-child(1){
+            left: 0;
+            bottom: 0;
+            width: 3px;
+            height: 100%;
+            transform: scaleY(0);
+            transform-origin: top;
+            transition: transform 0.25s;
+        }
+        &:hover span:nth-child(1){
+            transform: scaleY(1);
+            transform-origin: bottom;
+            transition: transform 0.25s;
+        }
+
+        span:nth-child(2){
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 3px;
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.25s;
+        }
+        &:hover span:nth-child(2){
+            transform: scaleX(1);
+            transform-origin: left;
+            transition: transform 0.25s;
+        
+        }
+        span:nth-child(3){
+            right: 0;
+            top: 0;
+            width: 3px;
+            height: 100%;
+            transform: scaleY(0);
+            transform-origin: bottom;
+            transition: transform 0.25s;
+        }
+        &:hover span:nth-child(3){
+            transform: scaleY(1);
+            transform-origin: top;
+            transition: transform 0.25s;
+        }
+        span:nth-child(4){
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 3px;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.25s;
+        }
+        &:hover span:nth-child(4){
+            transform: scaleX(1);
+            transform-origin: right;
+            transition: transform 0.25s;
+        }
+        
+
+    }
+
+    &__items{
+        box-sizing: border-box;
+        padding: 20px;
+        max-height: 85vh;
+        overflow-y: scroll;
+        &::-webkit-scrollbar{
+            width: 0px;
+        }
+        
+    }
+}

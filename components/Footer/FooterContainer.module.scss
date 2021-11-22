@@ -9,7 +9,7 @@
 
     &:hover{
         // transform: translateY(-50px);
-        box-shadow: 0px 3px 20px 20px #0000007e;
+        box-shadow: 0px 3px 20px 20px rgba(79, 30, 124, 0.473);
     }
     
     &__Box{
@@ -64,7 +64,7 @@
                     transform: scale(1.2);
                     background: white;
                     svg{
-                        color:black;
+                        color:#622fc5;
                     }
                 }
             }
@@ -76,7 +76,7 @@
 @media (max-width: 900px) {
     .Container{
         $self: &;
-        margin-top: 5rem;
+        // margin-top: 5rem;
         
         &__Box{
             flex-direction: column;

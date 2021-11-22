@@ -27,10 +27,13 @@
             font-weight: bolder;
             margin: 0rem 1rem;
             opacity: 0.6;
-         &.active{
-            color: blue;
-            opacity: 1;
-         }   
+            &:hover{
+                color: #622fc5;
+            }
+            &.active{
+                color: #622fc5;
+                opacity: 1;
+            }   
         }
     }
 
@@ -56,20 +59,20 @@
             padding: 10px;
             border: 0;
             transition: 0.5s;
-          
+         
     
          &.active{
-            color: blue;
+            color: #622fc5;
             border-bottom: 5px solid;
-            border-color: blue;
+            border-color: #622fc5;
          }   
         }
     }
     
     &__btnMenu{
         position: relative;
-        width: 70px;
-        height: 70px;
+        width: 50px;
+        height: 50px;
         background: rgb(238, 237, 237);
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
         border-radius: 10px;
@@ -78,13 +81,12 @@
         align-items: center;
         cursor: pointer;
         overflow: hidden;
-        // margin-right: 1rem;
 
         span{
             position: absolute;
-            width: 40px;
-            height: 4px;
-            background: #1863ff;
+            width: 30px;
+            height: 3px;
+            background: #622fc5;
             border-radius: 4px;
             cursor: pointer;
             transition: 0.5s;
@@ -93,23 +95,23 @@
         span:nth-child(1){
             transform: translateY(-15px);
             width: 25px;
-            left: 15px;
+            left: 10px;
         }
         span:nth-child(2){
             transform: translateY(15px);
             width: 15px;
-            left: 15px;
+            left: 10px;
         }
 
         &.active{
             span:nth-child(1){
                 transform: translateY(0px) rotate(45deg);
                 transition-delay: 0.125s;
-                width: 40px;
+                width: 30px;
             }
             span:nth-child(2){
                 transform: translateY(0px) rotate(314deg);
-                width: 40px;
+                width: 30px;
                 transition-delay: 0.15s;
             }
             span:nth-child(3){

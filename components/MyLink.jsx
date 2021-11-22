@@ -5,7 +5,7 @@ import styles from '../components/Navbar/Navbar.module.scss'
 
 const MyLink = ({href, children}) => {
     const router = useRouter()
-    // console.log(router)
+
     return (
         <Link href={href}>
             <a className={router.asPath === href? `${styles.active}`: ""}>{children}</a>
