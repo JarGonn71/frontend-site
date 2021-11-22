@@ -19,7 +19,7 @@ const FundContainer = ({imageSrc}) => {
                         </div>
                 </div>
                 <div className={styles.Container__backImg}>
-                    <Image src={imageSrc} />
+                    <Image src={imageSrc} alt=""/>
                 </div>
             </div>
             <div className={styles.Container__scrollBox}>

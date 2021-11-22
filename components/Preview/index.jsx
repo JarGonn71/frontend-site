@@ -19,7 +19,7 @@ const Preview = ({imageSrc}) => {
                 <div className={styles.Container__box}>
                     <div className={styles.Container__text}>
                         <h1>
-                            Hi, I'am Alexa
+                            Hi, I am Alexa
                         </h1>
                         <p>
                             Товарищи при всех трудностях которые сложились во всем мире, нужно признать что нам необходимо заниматься саморазвитием, наша площадка желает быть максимально полезной и предоставляет всем желающим обучится в чему нибудь новому, бесплатные курсы в различных сферах. 
@@ -33,7 +33,7 @@ const Preview = ({imageSrc}) => {
                         </div>
                     </div>
                     <div className={styles.Container__backImg}>
-                        <Image src={imageSrc} />
+                        <Image src={imageSrc} alt=""/>
                     </div>
                 </div>
                 <div className={styles.Container__scrollBox}>
