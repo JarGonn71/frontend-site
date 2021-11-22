@@ -1,4 +1,4 @@
-import styles from './Education.module.scss'
+import styles from "./Education.module.scss"
 import Image from "next/image";
 
 const Education = ({imageSrc}) => {
@@ -6,7 +6,7 @@ const Education = ({imageSrc}) => {
         <div className={styles.Container}>
             <div className={styles.Container__box}>
                 <div className={styles.Container__backImg}>
-                    <Image src={imageSrc} />
+                    <Image src={imageSrc} alt=""/>
                 </div>
                 <div className={styles.Container__text}>
                         <h1>
